@@ -56,5 +56,10 @@
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
 
+    <!-- QuickSettings haptic feedback -->
+    <string name="qs_category">Quick settings customisations</string>
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching QS tiles</string>
+
 </resources>
 

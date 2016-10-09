@@ -57,6 +57,18 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="statusbar_battery_category"
+        android:title="@string/sb_battery">
+
+    <Preference
+        android:key="battery_bar_category"
+        android:fragment="com.rebellion.settings.fragments.BatteryBar"
+        android:summary="@string/battery_bar_summary"
+        android:title="@string/battery_bar_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="statusbar_gestures_category"
         android:title="@string/sb_gestures">
 

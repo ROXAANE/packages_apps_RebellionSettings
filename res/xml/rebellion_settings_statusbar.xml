@@ -32,4 +32,16 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="statusbar_gestures_category"
+        android:title="@string/sb_gestures">
+
+     <com.rebellion.support.preferences.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_gesture"
+        android:title="@string/double_tap_to_sleep_title"
+        android:summary="@string/double_tap_to_sleep_summary"
+        android:defaultValue="true" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

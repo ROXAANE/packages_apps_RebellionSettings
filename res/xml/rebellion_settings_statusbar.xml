@@ -56,4 +56,15 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="statusbar_ntraffic_category"
+        android:title="@string/sb_ntraffic_title">
+
+      <Preference
+         android:key="traffic"
+         android:fragment="com.rebellion.settings.fragments.Traffic"
+         android:title="@string/traffic_title" />
+
+     </PreferenceCategory>
+
 </PreferenceScreen>

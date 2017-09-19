@@ -95,6 +95,18 @@
             android:layout="@layout/rebellion_divider"
             android:selectable="false" />
 
+        <!-- Power menu -->
+        <Preference
+            android:key="power_menu"
+            android:title="@string/powermenu_title"
+            android:summary="@string/powermenu_summary"
+            android:fragment="com.rebellion.settings.fragments.PowerMenu"
+            android:icon="@drawable/ic_settings_powermenu"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
         <!-- Lock Screen -->
         <Preference
             android:key="lockscreen_category"

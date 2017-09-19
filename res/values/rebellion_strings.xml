@@ -389,4 +389,13 @@
     <string name="notification_guts_kill_app_button_title">Kill app button</string>
     <string name="notification_guts_kill_app_button_summary">Show a kill app button in the notification\'s longpress menu</string>
 
+    <!-- Power Menu -->
+    <string name="hardware_keys_power_category">Power Button</string>
+    <string name="powermenu_title">Power Menu</string>
+    <string name="powermenu_summary">Customize elements to be displayed in power menu</string>
+    <string name="powermenu_reboot_title">Reboot</string>
+    <string name="powermenu_advanced_reboot_title">Advanced Reboot</string>
+    <string name="powermenu_lockdown">Lockdown</string>
+    <string name="powermenu_screenshot_title">Screenshot</string>
+
 </resources>

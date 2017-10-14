@@ -17,11 +17,13 @@ package com.rebellion.settings.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
@@ -31,15 +33,27 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.settings.R;
 
+import com.rebellion.settings.preferences.Utils;
+
 public class System extends SettingsPreferenceFragment {
 
     public static final String TAG = "System";
+
+    private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.rebellion_settings_system);
+
+        final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefSet = getPreferenceScreen();
+
+        PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
+        if (!Utils.isVoiceCapable(getActivity())) {
+                prefSet.removePreference(incallVibCategory);
+        }
     }
 
     @Override

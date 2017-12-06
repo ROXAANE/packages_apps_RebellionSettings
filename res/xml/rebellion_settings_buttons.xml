@@ -65,6 +65,16 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory 
+        android:key="hardware_keys"
+	android:title="@string/hardware_keys_category">
+
+    <com.rebellion.support.preferences.SystemSettingSwitchPreference
+        android:key="hardware_keys_disable"
+	android:title="@string/hardware_keys_disable_title" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:key="back_key"
         android:title="@string/hardware_keys_back_key_title" >

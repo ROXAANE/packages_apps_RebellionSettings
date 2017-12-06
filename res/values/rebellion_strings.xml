@@ -301,4 +301,8 @@
     <string name="button_backlight_enable_title">Allow backlight</string>
     <string name="button_backlight_enable_summary">Enable backlight for capacitive keys</string>
 
+    <!-- Hardware keys -->
+    <string name="hardware_keys_category">Hardware navigation buttons</string>
+    <string name="hardware_keys_disable_title">Disable hardware buttons</string>
+
 </resources>

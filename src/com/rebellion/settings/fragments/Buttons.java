@@ -34,7 +34,10 @@ import com.rebellion.settings.preferences.ActionFragment;
 
 public class Buttons extends ActionFragment implements Preference.OnPreferenceChangeListener {
 
+    private static final String HWKEY_DISABLE = "hardware_keys_disable";
+
     // category keys
+    private static final String CATEGORY_HWKEY = "hardware_keys";
     private static final String CATEGORY_BACK = "back_key";
     private static final String CATEGORY_HOME = "home_key";
     private static final String CATEGORY_MENU = "menu_key";
@@ -55,6 +58,7 @@ public class Buttons extends ActionFragment implements Preference.OnPreferenceCh
     private static final String TORCH_POWER_BUTTON_GESTURE = "torch_power_button_gesture";
     private static final String KEY_BUTTON_BRIGHTNESS = "button_brightness";
 
+    private SwitchPreference mHwKeyDisable;
     private ListPreference mTorchPowerButton;
     private Preference mButtonBrightness;
 
@@ -66,6 +70,21 @@ public class Buttons extends ActionFragment implements Preference.OnPreferenceCh
         final Resources res = getResources();
         final PreferenceScreen prefScreen = getPreferenceScreen();
         final ContentResolver resolver = getActivity().getContentResolver();
+
+        final boolean needsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
+        final PreferenceCategory hwkeyCat = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_HWKEY);
+        int keysDisabled = 0;
+        if (!needsNavbar) {
+            mHwKeyDisable = (SwitchPreference) findPreference(HWKEY_DISABLE);
+            keysDisabled = Settings.Secure.getIntForUser(getContentResolver(),
+                    Settings.Secure.HARDWARE_KEYS_DISABLE, 0,
+                    UserHandle.USER_CURRENT);
+            mHwKeyDisable.setChecked(keysDisabled != 0);
+            mHwKeyDisable.setOnPreferenceChangeListener(this);
+        } else {
+            prefScreen.removePreference(hwkeyCat);
+        }
 
          // bits for hardware keys present on device
         final int deviceKeys = getResources().getInteger(
@@ -111,6 +130,9 @@ public class Buttons extends ActionFragment implements Preference.OnPreferenceCh
          // let super know we can load ActionPreferences
         onPreferenceScreenLoaded(ActionConstants.getDefaults(ActionConstants.HWKEYS));
 
+        // load preferences first
+        setActionPreferencesEnabled(keysDisabled == 0);
+
         // screen off torch
         mTorchPowerButton = (ListPreference) findPreference(TORCH_POWER_BUTTON_GESTURE);
         int mTorchPowerButtonValue = Settings.Secure.getInt(resolver,
@@ -143,6 +165,13 @@ public class Buttons extends ActionFragment implements Preference.OnPreferenceCh
                     Toast.LENGTH_SHORT).show();
             }
             return true;
+        } else if (preference == mHwKeyDisable) {
+            boolean value = (Boolean) objValue;
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.HARDWARE_KEYS_DISABLE,
+                    value ? 1 : 0);
+            setActionPreferencesEnabled(!value);
+        } else {
+            return false;
         }
 
         return false;

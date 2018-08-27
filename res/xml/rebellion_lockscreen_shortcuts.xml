@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2020 Rebellion-OS
+<!--
+     Copyright (C) 2020 Rebellion-OS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,20 +14,21 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen
+<PreferenceScreen 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/lockscreen_title" >
+    android:title="@string/lockscreen_shortcuts">
 
     <PreferenceCategory
-        android:key="lockscreen_category"
-        android:title="@string/ls_category">
+        android:key="lockscreen_tuner"
+        android:title="@string/ls_tuner">
 
-         <Preference
-            android:key="lockscreen_shortcuts"
-            android:fragment="com.rebellion.settings.fragments.LockscreenShortcuts"
-            android:title="@string/lockscreen_shortcuts"
-            android:summary="@string/ls_shortcut_summary" />
+    <Preference
+            android:title="@string/lockscreen_tuner_title" >
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
+    </Preference>
 
     </PreferenceCategory>
 

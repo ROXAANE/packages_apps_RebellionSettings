@@ -106,4 +106,16 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="lockscreen_weather"
+        android:title="@string/weather_title">
+
+    <Preference
+        android:key="omnijaws_settings"
+        android:title="@string/weather_title"
+        android:summary="@string/weather_summary"
+        android:fragment="com.rebellion.settings.fragments.OmniJawsSettings" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

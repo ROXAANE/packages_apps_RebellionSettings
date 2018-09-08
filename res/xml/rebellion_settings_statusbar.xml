@@ -57,6 +57,18 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="statusbar_clock_category"
+        android:title="@string/sb_clock_title">
+
+    <Preference
+         android:key="clock_settings"
+         android:title="@string/clock_style_category_title"
+         android:summary="@string/clock_style_category_summary"
+         android:fragment="com.rebellion.settings.fragments.ClockSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="statusbar_battery_category"
         android:title="@string/sb_battery">
 

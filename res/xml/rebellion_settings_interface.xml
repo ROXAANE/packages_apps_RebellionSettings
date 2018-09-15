@@ -30,4 +30,16 @@
 
    </PreferenceCategory>
 
+    <PreferenceCategory
+       android:key="statusbar_items"
+       android:title="@string/sb_ui_title">
+
+    <Preference
+         android:key="carrierlabel_settings"
+         android:title="@string/carrier_label_category_title"
+         android:summary="@string/carrier_label_category_summary"
+         android:fragment="com.rebellion.settings.fragments.CarrierLabelSettings" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

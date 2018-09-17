@@ -699,4 +699,8 @@
     <string name="status_bar_logo_style_title">Rebellion logo style</string>
     <string name="status_bar_logo_color_title">Select color</string>
 
+    <!-- Hide On Lockscreen -->
+    <string name="hide_lockscreen_status_bar_title">Hide status bar</string>
+    <string name="hide_lockscreen_status_bar_summary">Touch status bar to toggle visibility</string>
+
 </resources>

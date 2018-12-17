@@ -667,4 +667,11 @@
     <string name="battery_light_full_color">Almost full battery</string>
     <string name="battery_light_reallyfull_color">Full (100) battery</string>
 
+    <!-- FastCharge LED -->
+    <string name="fast_color_cat_title">Fast charging</string>
+    <string name="fast_charging_led_enabled_title">Enable fast charging color</string>
+    <string name="fast_charging_led_enabled_summary">When fast charging, use different color till 90% charged</string>
+    <string name="fast_charging_light_color_title">Color</string>
+    <string name="fast_charging_light_color_summary"></string>
+
 </resources>

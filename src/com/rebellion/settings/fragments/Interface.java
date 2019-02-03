@@ -15,31 +15,50 @@
  */
 package com.rebellion.settings.fragments;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
+import android.content.ContentResolver;
 import android.os.Bundle;
-import androidx.preference.ListPreference;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.SwitchPreference;
+import android.os.UserHandle;
 import android.provider.Settings;
+import androidx.preference.*;
 
-import com.android.internal.logging.nano.MetricsProto; 
-import com.android.settings.SettingsPreferenceFragment;
+import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
-public class Interface extends SettingsPreferenceFragment {
+import com.rebellion.support.preferences.SystemSettingMasterSwitchPreference;
 
-    public static final String TAG = "Interface";
+public class Interface extends SettingsPreferenceFragment implements
+    Preference.OnPreferenceChangeListener {
+
+    private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
+
+    private SystemSettingMasterSwitchPreference mCustomHeader;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
         addPreferencesFromResource(R.xml.rebellion_settings_interface);
+        PreferenceScreen pref = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        mCustomHeader = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_CUSTOM_HEADER);
+        int qsHeader = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_CUSTOM_HEADER, 0);
+        mCustomHeader.setChecked(qsHeader != 0);
+        mCustomHeader.setOnPreferenceChangeListener(this);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mCustomHeader) {
+            boolean header = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER, header ? 1 : 0);
+            return true;
+        }
+        return false;
     }
 
     @Override

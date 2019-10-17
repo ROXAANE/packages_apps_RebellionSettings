@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright (C) 2020 Rebellion-OS
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Hub Title -->
+    <string name="rebellion_settings_title">Rebellion-Hub</string>
+    <string name="rebellion_dashboard_summary">Crowd of Rebels</string>
+
+    <!-- Categories -->
+    <string name="about_title">About</string>
+    <string name="about_summary">Who are we</string>
+    <string name="animations_title">Animations</string>
+    <string name="animations_summary">System animations, QS tile animations</string>
+    <string name="buttons_title">Buttons</string>
+    <string name="buttons_summary">Hardware keys, Power button torch</string>
+    <string name="gestures_title">Gestures</string>
+    <string name="gestures_summary">swipe to screenshot, System gestures</string>
+    <string name="lockscreen_title">Lock Screen</string>
+    <string name="lockscreen_summary">Music visualizer, pocket detection</string>
+    <string name="misc_title">Miscellaneous</string>
+    <string name="misc_summary">Gaming mode, charging animation</string>
+    <string name="navigation_title">Navigation</string>
+    <string name="navigation_summary">Navigation buttons, Navbar layout</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="notifications_summary">Edge lighting, Heads-up</string>
+    <string name="quicksettings_title">Quick Settings</string>
+    <string name="quicksettings_summary">Tile layout, Background blur</string>
+    <string name="statusbar_title">Status Bar</string>
+    <string name="statusbar_summary">Clock, Status bar icons</string>
+    <string name="battery_title">Battery Saving</string>
+    <string name="battery_saving_summary">Smart pixels, Agressive battery</string>
+    <string name="ambient_display_custom_title">Ambient Display</string>
+    <string name="ambient_display_custom_summary">Always on, music ticker, gestures</string>
+    <string name="interface_title">Themes &amp; UI</string>
+    <string name="interface_summary">RGB Accenter, Header image</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+</resources>
+

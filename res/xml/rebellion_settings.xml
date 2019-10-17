@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Copyright (C) 2020 Rebellion-OS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/rebellion_settings_title" >
+
+    <PreferenceCategory
+            android:key="features"
+            android:title="Rebellion Hub Features" >
+
+        <!-- Status Bar -->
+        <Preference
+            android:key="statusbar_category"
+            android:title="@string/statusbar_title"
+            android:summary="@string/statusbar_summary"
+            android:fragment="com.rebellion.settings.fragments.StatusBar" 
+            android:icon="@drawable/ic_settings_statusbar"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
+        <!-- Themes & UI -->
+        <Preference
+            android:key="interface_category"
+            android:title="@string/interface_title"
+            android:summary="@string/interface_summary"
+            android:fragment="com.rebellion.settings.fragments.Interface"
+            android:icon="@drawable/ic_settings_interface"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
+        <!-- Quick Settings -->
+        <Preference
+            android:key="quicksettings_category"
+            android:summary="@string/quicksettings_summary"
+            android:title="@string/quicksettings_title"
+            android:fragment="com.rebellion.settings.fragments.QuickSettings"
+            android:icon="@drawable/ic_settings_quicksettings"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
+        <!-- Buttons -->
+        <Preference
+            android:key="buttons_category"
+            android:title="@string/buttons_title"
+            android:summary="@string/buttons_summary"
+            android:fragment="com.rebellion.settings.fragments.Buttons"
+            android:icon="@drawable/ic_settings_buttons"/>
+        
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
+        <!-- Gestures -->
+        <Preference
+            android:key="gestures_category"
+            android:title="@string/gestures_title"
+            android:summary="@string/gestures_summary"
+            android:fragment="com.rebellion.settings.fragments.Gestures"
+            android:icon="@drawable/ic_settings_gesture"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
+        <!-- Navigation Bar -->
+        <Preference
+            android:key="navigation_category"
+            android:title="@string/navigation_title" 
+            android:summary="@string/navigation_summary"
+	    android:fragment="com.rebellion.settings.fragments.Navigation"
+            android:icon="@drawable/ic_settings_navigation"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
+        <!-- Lock Screen -->
+        <Preference
+            android:key="lockscreen_category"
+            android:title="@string/lockscreen_title" 
+            android:summary="@string/lockscreen_summary"
+            android:fragment="com.rebellion.settings.fragments.LockScreen"
+            android:icon="@drawable/ic_settings_lockscreen"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
+        <!-- Notifications -->
+        <Preference
+            android:key="notifications_category"
+            android:title="@string/notifications_title"
+            android:summary="@string/notifications_summary"
+            android:fragment="com.rebellion.settings.fragments.Notifications"
+            android:icon="@drawable/ic_settings_notifications"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
+        <!-- Animation -->
+        <Preference
+            android:key="animations_category"
+            android:title="@string/animations_title"
+            android:summary="@string/animations_summary"
+            android:fragment="com.rebellion.settings.fragments.Animations"
+            android:icon="@drawable/ic_settings_animation"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
+        <!-- Battery Saving -->
+        <Preference
+            android:key="battery_category"
+            android:title="@string/battery_title"
+            android:summary="@string/battery_saving_summary"
+            android:fragment="com.rebellion.settings.fragments.Battery"
+            android:icon="@drawable/ic_settings_batterysave"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
+        <!-- Misc -->
+        <Preference
+            android:key="misc_category"
+            android:title="@string/misc_title"
+            android:summary="@string/misc_summary"
+            android:fragment="com.rebellion.settings.fragments.Misc"
+            android:icon="@drawable/ic_settings_misc"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>

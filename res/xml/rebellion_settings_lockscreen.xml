@@ -85,6 +85,12 @@
             settings:interval="5"
             android:defaultValue="100"/>
 
+        <com.rebellion.support.preferences.SecureSettingSwitchPreference
+            android:key="lockscreen_visualizer_enabled"
+            android:title="@string/lockscreen_visualizer_enable"
+            android:summary="@string/lockscreen_visualizer_enable_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

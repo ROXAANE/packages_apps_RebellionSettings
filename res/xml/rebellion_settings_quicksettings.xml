@@ -69,6 +69,20 @@
     </PreferenceCategory>
 
     <PreferenceCategory 
+        android:key="qs_system_info_category" 
+        android:title="@string/system_info_title">
+
+     <com.rebellion.support.preferences.SystemSettingListPreference
+         android:key="qs_system_info"
+         android:title="@string/qs_system_info_title"
+         android:entries="@array/qs_system_info_entries"
+         android:entryValues="@array/qs_system_info_values"
+         android:defaultValue="0"
+         android:summary="%s" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory 
         android:key="qs_layout_category" 
         android:title="@string/qs_layout_category"> 
 

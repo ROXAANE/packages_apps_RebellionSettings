@@ -491,4 +491,13 @@
     <string name="lock_clock_font_dumbledor">Dumbledor</string>
     <string name="lock_clock_font_phantombold">PhantomBold</string>
 
+    <!-- QS SystemInfo -->
+    <string name="system_info_title">Qs System Info</string>
+    <string name="qs_system_info_title">System Info</string>
+    <string name="qs_system_info_off">Off</string>
+    <string name="qs_system_info_cpu_temp">CPU temperature</string>
+    <string name="qs_system_info_battery_temp">Battery temperature</string>
+    <string name="qs_system_info_gpu_clock">GPU frequency</string>
+    <string name="qs_system_info_gpu_busy">GPU utilization</string>
+
 </resources>

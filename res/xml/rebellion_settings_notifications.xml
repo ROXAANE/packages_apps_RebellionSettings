@@ -64,4 +64,24 @@
             android:defaultValue="false" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/doze_brightness_title" >
+
+        <com.rebellion.support.preferences.CustomSeekBarPreference
+            android:key="ambient_doze_brightness"
+            android:title="@string/ambient_doze_brightness_title"
+            android:summary="@string/ambient_doze_brightness_summary"
+            android:max="255"
+            settings:min="1"
+            android:persistent="false" />
+
+        <com.rebellion.support.preferences.CustomSeekBarPreference
+            android:key="ambient_pulse_brightness"
+            android:title="@string/ambient_pulse_brightness_title"
+            android:summary="@string/ambient_pulse_brightness_summary"
+            android:max="255"
+            settings:min="1"
+            android:persistent="false" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

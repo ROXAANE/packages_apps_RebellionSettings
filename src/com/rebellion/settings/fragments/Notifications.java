@@ -29,6 +29,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.rebellion.support.preferences.SystemSettingMasterSwitchPreference;
+import com.rebellion.support.preferences.CustomSeekBarPreference;
 
 public class Notifications extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -36,9 +37,13 @@ public class Notifications extends SettingsPreferenceFragment
     public static final String TAG = "Notifications";
 
     private static final String PULSE_AMBIENT_LIGHT = "pulse_ambient_light";
+    private static final String KEY_PULSE_BRIGHTNESS = "ambient_pulse_brightness";
+    private static final String KEY_DOZE_BRIGHTNESS = "ambient_doze_brightness";
 
     private Preference mChargingLeds;
     private SystemSettingMasterSwitchPreference mEdgePulse;
+    private CustomSeekBarPreference mPulseBrightness;
+    private CustomSeekBarPreference mDozeBrightness;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,26 @@ public class Notifications extends SettingsPreferenceFragment
         int edgePulse = Settings.System.getInt(getContentResolver(),
                 PULSE_AMBIENT_LIGHT, 0);
         mEdgePulse.setChecked(edgePulse != 0);
+
+        int defaultDoze = getResources().getInteger(
+                com.android.internal.R.integer.config_screenBrightnessDoze);
+        int defaultPulse = getResources().getInteger(
+                com.android.internal.R.integer.config_screenBrightnessPulse);
+        if (defaultPulse == -1) {
+            defaultPulse = defaultDoze;
+        }
+
+        mPulseBrightness = (CustomSeekBarPreference) findPreference(KEY_PULSE_BRIGHTNESS);
+        int value = Settings.System.getInt(getContentResolver(),
+                Settings.System.PULSE_BRIGHTNESS, defaultPulse);
+        mPulseBrightness.setValue(value);
+        mPulseBrightness.setOnPreferenceChangeListener(this);
+
+        mDozeBrightness = (CustomSeekBarPreference) findPreference(KEY_DOZE_BRIGHTNESS);
+        value = Settings.System.getInt(getContentResolver(),
+                Settings.System.DOZE_BRIGHTNESS, defaultDoze);
+        mDozeBrightness.setValue(value);
+        mDozeBrightness.setOnPreferenceChangeListener(this);
 
         mChargingLeds = (Preference) findPreference("charging_light");
         if (mChargingLeds != null
@@ -68,7 +93,17 @@ public class Notifications extends SettingsPreferenceFragment
             Settings.System.putInt(getContentResolver(),
 		            PULSE_AMBIENT_LIGHT, value ? 1 : 0);
             return true;
-        }
+        } else if (preference == mPulseBrightness) {
+            int value = (Integer) objValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.PULSE_BRIGHTNESS, value);
+            return true;
+        } else if (preference == mDozeBrightness) {
+            int value = (Integer) objValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.DOZE_BRIGHTNESS, value);
+            return true;
+            }
         return false;
     }
 

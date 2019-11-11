@@ -836,6 +836,7 @@
     <string name="volume_steps_reset">Reset</string>
 
     <!-- Navbar options -->
+    <string name="nav_bar_layout">Layout</string>
     <string name="navbar_invert_layout_title">Invert layout</string>
     <string name="navbar_invert_layout_summary">Use inverted layout for navbar buttons</string>
 

@@ -728,4 +728,8 @@
     <string name="lockscreen_weather_show_image_title">Show Condition Image</string>
     <string name="lockscreen_weather_show_image_summary">Show weather conditions image</string>
 
+    <!-- QS background opacity -->
+    <string name="qs_theme_category">Style</string>
+    <string name="qs_panel_alpha_title">Background opacity</string>
+
 </resources>

@@ -51,6 +51,8 @@
     <string name="interface_summary">RGB Accenter, Header image</string>
     <string name="system_title">System</string>
     <string name="system_summary">Suspend actions, In-call vibrations</string>
+    <string name="screen_title">Screen</string>
+    <string name="screen_summary">Rounded corners, Full screen ui</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>

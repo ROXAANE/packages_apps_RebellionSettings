@@ -84,6 +84,18 @@
             android:layout="@layout/rebellion_divider"
             android:selectable="false" />
 
+        <!-- Screen -->
+        <Preference
+            android:key="screen_category"
+            android:title="@string/screen_title"
+            android:summary="@string/screen_summary"
+            android:fragment="com.rebellion.settings.fragments.Screen"
+            android:icon="@drawable/ic_settings_screen"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
         <!-- Navigation Bar -->
         <Preference
             android:key="navigation_category"

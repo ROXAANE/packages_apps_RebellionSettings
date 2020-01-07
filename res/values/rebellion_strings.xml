@@ -534,4 +534,11 @@
     <string name="battery_percentage_estimate">Enabled (estimate)</string>
     <string name="battery_percentage_percentage_estimate">Enabled (percent | estimate)</string>
 
+    <!-- RGB Accenter -->
+    <string name="theme_rgb_title">RGB Accent | Gradient Theming</string>
+    <string name="themes_hub_title">Themes Hub</string>
+    <string name="themes_hub_summary">Accents-Gradients-Themes</string>
+    <string name="accent_color">Accent picker</string>
+    <string name="accent_summary">Gradient Maker</string>
+
 </resources>

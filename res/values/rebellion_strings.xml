@@ -864,6 +864,7 @@
     <string name="corner_fwvals_summary">Useful if the device actually has rounded corners</string>
 
     <!-- Ambient visualizer -->
+    <string name="ambient_visualizer_category">Ambient Visualizer</string>
     <string name="ambient_visualizer_title">Ambient visualizer</string>
     <string name="ambient_visualizer_summary">Shows white visualization bars on ambient display unless custom color is selected</string>
 

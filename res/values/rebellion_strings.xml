@@ -198,6 +198,10 @@
     <string name="qs_edit_title">Edit Icon</string>
     <string name="qs_edit_summary">Enable the tile edit icon in the footer</string>
 
+    <!-- Persist Setting Button -->
+    <string name="qs_persist_setting_button_title">Persist Setting Button Icon</string>
+    <string name="qs_persist_setting_button_summary">Disable settings button in non exapanded panel</string>
+
     <!-- Statusbar net monitor -->
     <string name="sb_ntraffic_title">Statusbar Network Traffic</string>
     <string name="traffic_title">Traffic indicators</string>
@@ -253,4 +257,3 @@
     <string name="hardware_keys_double_tap_title">Double tap action</string>
 
 </resources>
-	

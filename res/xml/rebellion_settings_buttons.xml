@@ -185,4 +185,17 @@
 
     </PreferenceCategory>
 
+     <PreferenceCategory
+        android:key="button_backlight_category"
+        android:title="@string/bbl_title">
+
+        <Preference
+            android:key="button_brightness"
+            android:title="@string/button_backlight_title"
+            android:summary="@string/button_backlight_summary"
+            android:persistent="false"
+            android:fragment="com.rebellion.settings.fragments.ButtonBrightness" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

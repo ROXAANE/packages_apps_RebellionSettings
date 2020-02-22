@@ -53,8 +53,10 @@ public class Buttons extends ActionFragment implements Preference.OnPreferenceCh
     public static final int KEY_MASK_VOLUME = 0x40;
 
     private static final String TORCH_POWER_BUTTON_GESTURE = "torch_power_button_gesture";
+    private static final String KEY_BUTTON_BRIGHTNESS = "button_brightness";
 
     private ListPreference mTorchPowerButton;
+    private Preference mButtonBrightness;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -116,6 +118,8 @@ public class Buttons extends ActionFragment implements Preference.OnPreferenceCh
         mTorchPowerButton.setValue(Integer.toString(mTorchPowerButtonValue));
         mTorchPowerButton.setSummary(mTorchPowerButton.getEntry());
         mTorchPowerButton.setOnPreferenceChangeListener(this);
+
+        mButtonBrightness = (Preference) findPreference(KEY_BUTTON_BRIGHTNESS);
     }
 
     @Override

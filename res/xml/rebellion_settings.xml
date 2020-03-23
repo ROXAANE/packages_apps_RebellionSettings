@@ -143,6 +143,18 @@
             android:layout="@layout/rebellion_divider"
             android:selectable="false" />
 
+        <!-- System -->
+        <Preference
+            android:key="system_category"
+            android:title="@string/system_title"
+            android:summary="@string/system_summary"
+            android:fragment="com.rebellion.settings.fragments.System"
+            android:icon="@drawable/ic_settings_system"/>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
         <!-- Misc -->
         <Preference
             android:key="misc_category"

@@ -49,6 +49,8 @@
     <string name="ambient_display_custom_summary">Always on, music ticker, gestures</string>
     <string name="interface_title">Themes &amp; UI</string>
     <string name="interface_summary">RGB Accenter, Header image</string>
+    <string name="system_title">System</string>
+    <string name="system_summary">Suspend actions, In-call vibrations</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>

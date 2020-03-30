@@ -259,8 +259,10 @@
     <string name="hardware_keys_double_tap_title">Double tap action</string>
 
     <!-- Fingerprint authentication vibration -->
-    <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
-    <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
+    <string name="fprint_sucess_vib_title">FP authentication vibration</string>
+    <string name="fprint_sucess_vib_summary">Vibrate when fingerprint authentication is successful</string>
+    <string name="fprint_error_vib_title">FP error vibration</string>
+    <string name="fprint_error_vib_summary">Vibrate when fingerprint authentication fails</string>
 
     <!-- Lock screen cover art -->
     <string name="lockscreen_media_category">Music</string>

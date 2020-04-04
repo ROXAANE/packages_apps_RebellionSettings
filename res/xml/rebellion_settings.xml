@@ -73,11 +73,12 @@
 
         <!-- Gestures -->
         <Preference
-            android:key="gestures_category"
-            android:title="@string/gestures_title"
+            android:key="gesture_settings"
+            android:title="@string/gesture_preference_title"
             android:summary="@string/gestures_summary"
-            android:fragment="com.rebellion.settings.fragments.Gestures"
-            android:icon="@drawable/ic_settings_gesture"/>
+            android:icon="@drawable/ic_settings_gesture"
+            android:fragment="com.android.settings.gestures.GestureSettings"
+            settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
 
         <PreferenceScreen
             android:layout="@layout/rebellion_divider"

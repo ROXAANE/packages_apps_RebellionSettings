@@ -703,4 +703,8 @@
     <string name="hide_lockscreen_status_bar_title">Hide status bar</string>
     <string name="hide_lockscreen_status_bar_summary">Touch status bar to toggle visibility</string>
 
+    <!-- QS Battery Position -->
+    <string name="qs_battery_location_bar">Battery in QS Header</string>
+    <string name="qs_battery_location_bar_summary">Shows battery in QS Header</string>
+
 </resources>

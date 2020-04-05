@@ -104,6 +104,12 @@
         android:key="qs_battery_style_category"
         android:title="@string/qs_battery_style_title" >
 
+        <com.rebellion.support.preferences.SecureSettingSwitchPreference
+            android:key="qs_battery_location_bar"
+            android:title="@string/qs_battery_location_bar"
+            android:summary="@string/qs_battery_location_bar_summary"
+            android:defaultValue="false" />
+
         <com.rebellion.support.preferences.SystemSettingListPreference
             android:key="qs_battery_mode"
             android:title="@string/battery_percentage_title"

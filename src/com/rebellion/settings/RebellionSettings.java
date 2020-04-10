@@ -31,10 +31,19 @@ import com.android.settings.SettingsPreferenceFragment;
 
 public class RebellionSettings extends SettingsPreferenceFragment {
 
+    private static final String KEY_AMBIENT_DISPLAY_CUSTOM = "ambient_display_custom";
+
+    private Preference mCustomDoze;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.rebellion_settings);
+
+        mCustomDoze = (Preference) findPreference(KEY_AMBIENT_DISPLAY_CUSTOM);
+        if (!getResources().getBoolean(com.android.internal.R.bool.config_alt_ambient_display)) {
+            getPreferenceScreen().removePreference(mCustomDoze);
+        }
     }
 
     @Override

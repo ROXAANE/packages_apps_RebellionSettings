@@ -120,6 +120,23 @@
             android:layout="@layout/rebellion_divider"
             android:selectable="false" />
 
+        <!-- Ambient Display -->
+        <Preference
+            android:key="ambient_display_custom"
+            android:persistent="false"
+            android:title="@string/ambient_display_custom_title"
+            android:summary="@string/ambient_display_summary"
+            android:icon="@drawable/ic_settings_ambient" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.custom.ambient.display"
+                android:targetClass="com.custom.ambient.display.DozeSettings" />
+        </Preference>
+
+        <PreferenceScreen
+            android:layout="@layout/rebellion_divider"
+            android:selectable="false" />
+
         <!-- Notifications -->
         <Preference
             android:key="notifications_category"

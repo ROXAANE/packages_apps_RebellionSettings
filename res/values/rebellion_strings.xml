@@ -752,6 +752,15 @@
     <string name="file_header_select_summary">Select an image from internal storage</string>
     <string name="status_bar_custom_header_shadow_title">Darken image</string>
 
+    <!-- Lock screen clock and date stuffs -->
+    <string name="lock_date_font_title">Date font options</string>
+    <string name="lock_date_font_summary">Change the default font of the lockscreen date widget</string>
+    <string name="lock_date_font_dialog_title">Select lock date font</string>
+    <string name="lockdate_font_size_title">Date font size</string>
+    <string name="lockclock_font_size_title">Clock font size</string>
+    <string name="lockscreen_ui_title">Lockscreen UI</string>
+    <string name="lockscreen_ui_summary">Change the looks of Lockscreen</string>
+
 </resources>
 
 

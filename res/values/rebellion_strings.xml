@@ -142,6 +142,9 @@
     <string name="volte_icon_volte">VoLTE Icon</string>
     <string name="volte_icon_oos">VoLTE OOS Icon</string>
     <string name="volte_icon_hd">HD Icon</string>
+    <string name="volte_icon_rebellion_x">Rebellion-x VoLTE Icon</string>
+    <string name="volte_icon_rebellion_y">Rebellion-y VoLTE Icon</string>
+    <string name="volte_icon_rebellion_z">Rebellion-z VoLTE Icon</string>
 
     <!-- Quick Settings on Lockscreen -->
     <string name="lockscreen_qs_disabled_title">Disable quick settings when locked</string>

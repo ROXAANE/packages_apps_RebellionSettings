@@ -28,12 +28,17 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.rebellion.support.preferences.SystemSettingMasterSwitchPreference;
+
 public class Notifications extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "Notifications";
 
+    private static final String PULSE_AMBIENT_LIGHT = "pulse_ambient_light";
+
     private Preference mChargingLeds;
+    private SystemSettingMasterSwitchPreference mEdgePulse;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,12 @@ public class Notifications extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.rebellion_settings_notifications);
         PreferenceScreen prefScreen = getPreferenceScreen();
         final Resources res = getResources();
+
+        mEdgePulse = (SystemSettingMasterSwitchPreference) findPreference(PULSE_AMBIENT_LIGHT);
+        mEdgePulse.setOnPreferenceChangeListener(this);
+        int edgePulse = Settings.System.getInt(getContentResolver(),
+                PULSE_AMBIENT_LIGHT, 0);
+        mEdgePulse.setChecked(edgePulse != 0);
 
         mChargingLeds = (Preference) findPreference("charging_light");
         if (mChargingLeds != null
@@ -52,6 +63,12 @@ public class Notifications extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mEdgePulse) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(),
+		            PULSE_AMBIENT_LIGHT, value ? 1 : 0);
+            return true;
+        }
         return false;
     }
 

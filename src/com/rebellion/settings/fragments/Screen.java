@@ -26,16 +26,23 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.internal.util.rebellion.Utils;
 
 public class Screen extends SettingsPreferenceFragment implements
     Preference.OnPreferenceChangeListener {
+
+    private static final String KEY_FORCE_FULLSCREEN = "display_cutout_force_fullscreen_settings";
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.rebellion_settings_screen);
-        PreferenceScreen pref = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+
+        final Preference forceFullscreen = (Preference) getPreferenceScreen().findPreference(KEY_FORCE_FULLSCREEN);
+        if (!Utils.hasNotch(getContext())) {
+            getPreferenceScreen().removePreference(forceFullscreen);
+        }
     }
 
     @Override

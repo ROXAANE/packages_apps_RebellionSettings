@@ -19,20 +19,8 @@
     android:title="@string/quicksettings_title" >
 
      <PreferenceCategory
-        android:key="quick_settings_category"
-        android:title="@string/qs_category">
-
-        <com.rebellion.support.preferences.SecureSettingSwitchPreference
-            android:key="quick_settings_vibrate"
-            android:title="@string/quick_settings_vibrate_title"
-            android:summary="@string/quick_settings_vibrate_summary"
-            android:defaultValue="false"/>
-
-        <com.rebellion.support.preferences.SystemSettingSwitchPreference 
-            android:key="qs_tile_title_visibility" 
-            android:title="@string/qs_tile_title_visibility_title" 
-            android:summary="@string/qs_tile_title_visibility_summary" 
-            android:defaultValue="true" /> 
+        android:key="quick_settings_pulldown"
+        android:title="@string/pulldown_category">
 
         <ListPreference
             android:key="smart_pulldown"
@@ -47,6 +35,12 @@
             android:entries="@array/quick_pulldown_entries"
             android:entryValues="@array/quick_pulldown_values"
             android:defaultValue="0" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory 
+        android:key="qs_footer_category" 
+        android:title="@string/qs_footer_title">
 
         <com.rebellion.support.preferences.SystemSettingSwitchPreference
             android:key="qs_running_services_toggle"
@@ -163,6 +157,23 @@
             android:defaultValue="6"
             android:persistent="false" />
 
+    </PreferenceCategory>
+
+     <PreferenceCategory
+        android:key="quick_settings_category"
+        android:title="@string/qs_category">
+
+        <com.rebellion.support.preferences.SecureSettingSwitchPreference
+            android:key="quick_settings_vibrate"
+            android:title="@string/quick_settings_vibrate_title"
+            android:summary="@string/quick_settings_vibrate_summary"
+            android:defaultValue="false"/>
+
+        <com.rebellion.support.preferences.SystemSettingSwitchPreference 
+            android:key="qs_tile_title_visibility" 
+            android:title="@string/qs_tile_title_visibility_title" 
+            android:summary="@string/qs_tile_title_visibility_summary" 
+            android:defaultValue="true" /> 
     </PreferenceCategory>
 
     <PreferenceCategory

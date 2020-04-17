@@ -26,33 +26,33 @@
     <string name="about_title">About</string>
     <string name="about_summary">Who are we</string>
     <string name="animations_title">Animations</string>
-    <string name="animations_summary">System animations, QS tile animations</string>
+    <string name="animations_summary">Change the animations styles</string>
     <string name="buttons_title">Buttons</string>
-    <string name="buttons_summary">Hardware keys, Power button torch</string>
+    <string name="buttons_summary">Tweak the actions of your hardware buttons</string>
     <string name="gestures_title">Gestures</string>
-    <string name="gestures_summary">swipe to screenshot, System gestures</string>
+    <string name="gestures_summary">Gesture based actions</string>
     <string name="lockscreen_title">Lock Screen</string>
-    <string name="lockscreen_summary">Music visualizer, pocket detection</string>
+    <string name="lockscreen_summary">Beautify the look of your lockscreen</string>
     <string name="misc_title">Miscellaneous</string>
-    <string name="misc_summary">Gaming mode, charging animation</string>
+    <string name="misc_summary">System misc settings like charging animation</string>
     <string name="navigation_title">Navigation</string>
-    <string name="navigation_summary">Navigation buttons, Navbar layout</string>
+    <string name="navigation_summary">Customize navigation bar style and behavior</string>
     <string name="notifications_title">Notifications</string>
-    <string name="notifications_summary">Edge lighting, Heads-up</string>
+    <string name="notifications_summary">Manage your notification settings</string>
     <string name="quicksettings_title">Quick Settings</string>
-    <string name="quicksettings_summary">Tile layout, Background blur</string>
+    <string name="quicksettings_summary">Customize your QS panel</string>
     <string name="statusbar_title">Status Bar</string>
-    <string name="statusbar_summary">Clock, Status bar icons</string>
+    <string name="statusbar_summary">Personalize your status bar items</string>
     <string name="battery_title">Battery Saving</string>
-    <string name="battery_saving_summary">Smart pixels, Agressive battery</string>
+    <string name="battery_saving_summary">Tweaks to save your battery</string>
     <string name="ambient_display_custom_title">Ambient Display</string>
-    <string name="ambient_display_custom_summary">Always on, music ticker, gestures</string>
+    <string name="ambient_display_custom_summary">Wake gestures &amp; screen when you receive notifications</string>
     <string name="interface_title">Themes &amp; UI</string>
-    <string name="interface_summary">RGB Accenter, Header image</string>
+    <string name="interface_summary">Pimp your device with awesome themes</string>
     <string name="system_title">System</string>
-    <string name="system_summary">Suspend actions, In-call vibrations</string>
+    <string name="system_summary">Modify the system settings</string>
     <string name="screen_title">Screen</string>
-    <string name="screen_summary">Rounded corners, Full screen ui</string>
+    <string name="screen_summary">beautify the Rounded corners &amp; paddings</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -62,6 +62,7 @@
     <string name="default_string">Default</string>
 
     <!-- QuickSettings haptic feedback -->
+    <string name="qs_footer_title">Qs footer settings</string>
     <string name="qs_category">Quick settings customisations</string>
     <string name="quick_settings_vibrate_title">Vibrate on touch</string>
     <string name="quick_settings_vibrate_summary">Vibrate when touching QS tiles</string>
@@ -90,7 +91,7 @@
     <string name="qs_set_animation_interpolator">%1$s</string>
 
     <!-- Lockscreen shortcuts -->
-    <string name="ls_category">Lockscreen Items</string>
+    <string name="ls_category">Lockscreen Shortcuts settings</string>
     <string name="ls_tuner">Enable Lockscreen tuner</string>
     <string name="lockscreen_shortcuts">Lockscreen shortcuts</string>
     <string name="ls_shortcut_summary">Customize Lockscreen shortcuts</string>
@@ -198,6 +199,7 @@
     <string name="heads_up_snooze_20min">20 minutes</string>
 
     <!-- Quick QS pulldown -->
+    <string name="pulldown_category">quick settings pulldown</string>
     <string name="status_bar_quick_qs_pulldown">Quick QS pulldown</string>
     <string name="quick_pulldown_none">Disabled</string>
     <string name="quick_pulldown_right">Pulldown statusbar from right side</string>
@@ -543,7 +545,6 @@
     <string name="lock_clock_font_satisfy" translatable="false">Satisfy</string>
     <string name="lock_clock_font_seaweedsc" translatable="false">Seaweed Script</string>
     <string name="lock_clock_font_sedgwick" translatable="false">Sedgwick Ave Display</string>
-    <string name="lock_clock_font_snowstorm" translatable="false">Snowstorm</string>
     <string name="lock_clock_font_sourcesanspro" translatable="false">Source Sans Pro</string>
     <string name="lock_clock_font_theoutbox" translatable="false">The Outbox</string>
     <string name="lock_clock_font_union" translatable="false">Union</string>
@@ -813,7 +814,7 @@
     <string name="lockdate_font_size_title">Date font size</string>
     <string name="lockclock_font_size_title">Clock font size</string>
     <string name="lockscreen_ui_title">Lockscreen UI</string>
-    <string name="lockscreen_ui_summary">Change the looks of Lockscreen</string>
+    <string name="lockscreen_ui_summary">Change the look of Lockscreen Clock &amp; Date</string>
 
     <!-- Lockscreen Colors -->
     <string name="lockscreen_colors">Lockscreen Colors</string>

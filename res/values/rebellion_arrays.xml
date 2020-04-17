@@ -366,6 +366,48 @@
         <item>@string/lock_clock_font_burnstown</item>
         <item>@string/lock_clock_font_dumbledor</item>
 	<item>@string/lock_clock_font_phantombold</item>
+        <item>@string/lock_clock_font_abelreg</item>
+        <item>@string/lock_clock_font_adamcg</item>
+        <item>@string/lock_clock_font_adventpro</item>
+        <item>@string/lock_clock_font_alexananeue</item>
+        <item>@string/lock_clock_font_alienleague</item>
+        <item>@string/lock_clock_font_archivo</item>
+        <item>@string/lock_clock_font_autour</item>
+        <item>@string/lock_clock_font_azedo</item>
+        <item>@string/lock_clock_font_badscript</item>
+        <item>@string/lock_clock_font_bignoodle</item>
+        <item>@string/lock_clock_font_biko</item>
+        <item>@string/lock_clock_font_blern</item>
+        <item>@string/lock_clock_font_cherryswash</item>
+        <item>@string/lock_clock_font_cocon</item>
+        <item>@string/lock_clock_font_codystar</item>
+        <item>@string/lock_clock_font_fester</item>
+        <item>@string/lock_clock_font_foxandcat</item>
+        <item>@string/lock_clock_font_ginorasans</item>
+        <item>@string/lock_clock_font_ibmplex</item>
+        <item>@string/lock_clock_font_inkferno</item>
+        <item>@string/lock_clock_font_instruction</item>
+        <item>@string/lock_clock_font_jacklane</item>
+        <item>@string/lock_clock_font_jura</item>
+        <item>@string/lock_clock_font_kellyslab</item>
+        <item>@string/lock_clock_font_metro1920</item>
+        <item>@string/lock_clock_font_monad</item>
+        <item>@string/lock_clock_font_noir</item>
+        <item>@string/lock_clock_font_north</item>
+        <item>@string/lock_clock_font_outrunfuture</item>
+        <item>@string/lock_clock_font_pompiere</item>
+        <item>@string/lock_clock_font_qontra</item>
+        <item>@string/lock_clock_font_raleway</item>
+        <item>@string/lock_clock_font_reemkufi</item>
+        <item>@string/lock_clock_font_riviera</item>
+        <item>@string/lock_clock_font_satisfy</item>
+        <item>@string/lock_clock_font_seaweedsc</item>
+        <item>@string/lock_clock_font_sedgwick</item>
+        <item>@string/lock_clock_font_sourcesanspro</item>
+        <item>@string/lock_clock_font_theoutbox</item>
+        <item>@string/lock_clock_font_union</item>
+        <item>@string/lock_clock_font_vibur</item>
+        <item>@string/lock_clock_font_voltaire</item>
     </string-array>
     <string-array name="lock_clock_fonts_values" translatable="false">
         <item>0</item>
@@ -404,6 +446,48 @@
 	<item>33</item>
         <item>34</item>
 	<item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
     </string-array>
 
     <!-- QS SystemInfo -->

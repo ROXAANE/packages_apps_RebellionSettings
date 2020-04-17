@@ -20,11 +20,44 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/screen_title" >
 
-        <Preference
-            android:key="rounded_corners" 
-            android:title="@string/corners_category_title"
-            android:summary="@string/corners_category_summary"
-            android:fragment="com.rebellion.settings.fragments.RoundedCornersSettings" />
+    <PreferenceCategory
+        android:key="rounded_corners_category"
+        android:title="@string/corners_category_title" >
+
+    <com.rebellion.support.preferences.SecureSettingSwitchPreference
+       android:key="sysui_rounded_fwvals"
+       android:title="@string/corner_fwvals"
+       android:defaultValue="true"
+       android:disableDependentsState="true" />
+
+    <com.rebellion.support.preferences.CustomSeekBarPreference
+        android:key="sysui_rounded_size"
+        android:title="@string/corner_radius"
+        android:max="60"
+        settings:min="0"
+        settings:units="dp"
+        android:persistent="false"
+        android:dependency="sysui_rounded_fwvals" />
+
+    <com.rebellion.support.preferences.CustomSeekBarPreference
+        android:key="sysui_rounded_content_padding"
+        android:title="@string/content_padding"
+        android:max="30"
+        settings:min="0"
+        settings:units="dp"
+        android:persistent="false"
+        android:dependency="sysui_rounded_fwvals" />
+
+    <com.rebellion.support.preferences.CustomSeekBarPreference
+        android:key="sysui_status_bar_padding"
+        android:title="@string/status_bar_padding"
+        android:max="30"
+        settings:min="0"
+        settings:units="dp"
+        android:persistent="false"
+        android:dependency="sysui_rounded_fwvals" />
+
+    </PreferenceCategory>
 
     <Preference
         android:key="display_cutout_force_fullscreen_settings"
